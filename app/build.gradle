@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
 }
 
 android {
@@ -29,6 +30,15 @@ android {
     }
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+    kapt {
+        showProcessorStats = true
+        useBuildCache = true
+        correctErrorTypes = true
+        generateStubs = true // me
+        includeCompileClasspath = false
+        // Increase the max count of errors from annotation processors.
+        javacOptions { option("-Xmaxerrs", 500) } // Default is 100.
     }
 }
 
