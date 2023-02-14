@@ -3,9 +3,49 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- Allows read access to the device's phone number(s). This is a subset of the
+         capabilities granted by READ_PHONE_STATE but is exposed to instant applications. -->
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+
+    <!-- Allows read only access to phone state with a non dangerous permission,
+         including the information like cellular network type, software version. -->
+    <uses-permission android:name="android.permission.MANAGE_DEVICE_LOCK_STATE" />
+    <!-- Allows financed device kiosk apps to perform actions on the Device Lock service -->
+    <uses-permission android:name="android.permission.MANAGE_DEVICE_LOCK_STATE" />
+    <!-- Settings.ACTION_SETTINGS_EMBED_DEEP_LINK_ACTIVITY to show its Activity -->
+    <uses-permission
+        android:name="android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK"
+        tools:ignore="ProtectedPermissions" />
+    <!-- Allows an application to use location features in hardware, such as the geofencing api. -->
+    <uses-permission
+        android:name="android.permission.LOCATION_HARDWARE"
+        tools:ignore="ProtectedPermissions" />
+    <!-- Required only when requesting background location access on Android 10 (API level 29) and higher. -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <!-- Include only if your app benefits from precise location access. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Always include this permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--     <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" /> -->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:allowBackup="true"
         android:name=".common.App"
+        android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
