@@ -66,4 +66,17 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:$OkHttp_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$OkHttp_version"
     //    testImplementation("com.squareup.okhttp3:mockwebserver:$OkHttp_version")
+
+    // Room
+    def room_version = "2.5.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    //    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // To use Kotlin annotation processing tool (kapt)
+    kapt "androidx.room:room-compiler:$room_version"
+    // To use Kotlin Symbol Processing (KSP)
+    //    ksp "androidx.room:room-compiler:$room_version"
+    // optional - Test helpers
+    //    testImplementation "androidx.room:room-testing:$room_version"
+    // optional - Paging 3 Integration
+    //    implementation "androidx.room:room-paging:$room_version"
 }
